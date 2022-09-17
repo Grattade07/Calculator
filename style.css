@@ -29,7 +29,8 @@
 
 .num {
     width: 30px;
-    margin: 15px 40px;
+    height:40px;
+    margin: 15px 30px;
     font-size: 20px;
    
 }
@@ -37,13 +38,14 @@
 #functions {
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
+    justify-content: space-evenly;
     background-color: grey;
     width: 72px;
     height: 250px;
 }
 
 .opr {
-    margin: 0px 10px;
-    
+    margin: 0px 15px;
+    width: 45px;
+    height: 25px;
 }
