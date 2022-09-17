@@ -1,0 +1,10 @@
+#display {
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
+    border:1px black solid;
+    background-color: rgb(180, 176, 176);
+    width: 400px;
+    padding: 20px;
+    margin-bottom: 20px;
+}
