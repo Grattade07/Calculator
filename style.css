@@ -4,7 +4,8 @@
     justify-content: end;
     border:1px black solid;
     background-color: rgb(180, 176, 176);
-    width: 400px;
+    max-width: 400px;
+    height: 20px;
     padding: 20px;
     margin-bottom: 10px;
 }
@@ -12,20 +13,37 @@
 #buttons {
     display: flex;
     flex-direction: row;
-    max-width: 400px;
+    max-width: 450px;
 }
 
 #numpad {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-evenly;
     flex-wrap: wrap;
-    width: 300px;
-    height:250px;
+    flex-grow: 1;
+    max-width: 300px;
+    max-height:250px;
     padding: 10px;
+    margin-right: 50px;
 }
 
 .num {
-    width: 50px;
-    margin: 15px 25px;
+    width: 30px;
+    margin: 15px 40px;
     font-size: 20px;
+   
+}
+
+#functions {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    background-color: grey;
+    width: 72px;
+    height: 250px;
+}
+
+.opr {
+    margin: 0px 10px;
+    
 }
