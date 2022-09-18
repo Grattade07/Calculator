@@ -60,6 +60,8 @@ const storedNum = document.querySelector("#prevNum");
 
 let firstNum = 0;
 
+let selectedOpr = "";
+
 storedNum.textContent = firstNum;
 
 const operators = document.querySelectorAll(".opr");
@@ -67,8 +69,9 @@ const operators = document.querySelectorAll(".opr");
 operators.forEach((button) => {
     button.addEventListener("click", () => {
         firstNum = displayValue;
+        selectedOpr = button.textContent;
         resetNum()
         return display.textContent = displayValue,
-                storedNum.textContent = `${firstNum} ${button.textContent}`;
+                storedNum.textContent = `${firstNum} ${selectedOpr}`;
     })
 })
