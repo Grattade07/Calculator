@@ -25,3 +25,9 @@ function operate(operator, a, b) {
         console.log(divide(a,b))
     }
 }
+
+const display = document.querySelector('#display');
+
+let displayValue = 0;
+
+display.append(displayValue);
