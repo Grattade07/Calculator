@@ -69,6 +69,6 @@ operators.forEach((button) => {
         firstNum = displayValue;
         resetNum()
         return display.textContent = displayValue,
-                storedNum.textContent = firstNum;
+                storedNum.textContent = `${firstNum} ${button.textContent}`;
     })
 })
