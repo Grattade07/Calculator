@@ -37,9 +37,15 @@ const padNum = document.querySelectorAll(".num");
 //Edited method to remove current value on display and replace with new displayValue
 
 padNum.forEach((button) => {
-    button.addEventListener("click", () => {  
+    button.addEventListener("click", () => {
+    if (display.textContent === "0") {
+        console.log(display.textContent)
+        console.log(typeof(button.textContent));
     displayValue = button.textContent;
     return display.textContent = displayValue;
+    } else {
+        displayValue += button.textContent
+        return display.textContent = displayValue;
+    }
 })
 });
-
