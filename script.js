@@ -1,28 +1,28 @@
 function addition(a, b) {
-    console.log(a + b);
+    return (a + b);
 }
 
 function subtraction(a, b) {
-    console.log(a - b);
+    return (a - b);
 }
 
 function multiply(a, b) {
-    console.log(a * b);
+    return (a * b);
 }
 
 function divide(a, b) {
-    console.log (a / b);
+    return (a / b);
 }
 
-function operate(operator, a, b) {
+function operate(a, operator, b) {
     if (operator === "+") {
-        console.log(addition(a,b))
+       return addition(a,b)
     } else if (operator === "-") {
-        console.log(subtraction(a,b))
+        return subtraction(a,b)
     } else if (operator === "*") {
-        console.log(multiply(a,b))
+        return multiply(a,b)
     } else if (operator === "/") {
-        console.log(divide(a,b))
+        return divide(a,b)
     }
 }
 
@@ -56,6 +56,18 @@ function resetNum() {
     displayValue = 0;
     return display.textContent = displayValue;
 }
+
+function resetStoredNum () {
+    firstNum = 0;
+    return storedNum.textContent = firstNum;
+}
+
+function resetAll() {
+    displayValue = 0;
+    firstNum = 0;
+    return display.textContent = displayValue,
+            storedNum.textContent = firstNum;
+}
 const storedNum = document.querySelector("#prevNum");
 
 let firstNum = 0;
@@ -74,4 +86,12 @@ operators.forEach((button) => {
         return display.textContent = displayValue,
                 storedNum.textContent = `${firstNum} ${selectedOpr}`;
     })
+});
+
+const solution = document.querySelector(".equ");
+
+solution.addEventListener("click", () => {
+    displayValue = operate(Number(firstNum), selectedOpr, Number(displayValue));
+    resetStoredNum();
+    return display.textContent = displayValue;
 })
