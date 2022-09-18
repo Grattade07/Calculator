@@ -95,3 +95,9 @@ solution.addEventListener("click", () => {
     resetStoredNum();
     return display.textContent = displayValue;
 })
+
+const clearAll = document.querySelector(".clearAll");
+
+clearAll.addEventListener("click", () => {
+    resetAll();
+});
