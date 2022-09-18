@@ -56,5 +56,19 @@ function resetNum() {
     displayValue = 0;
     return display.textContent = displayValue;
 }
+const storedNum = document.querySelector("#prevNum");
+
+let firstNum = 0;
+
+storedNum.textContent = firstNum;
 
 const operators = document.querySelectorAll(".opr");
+
+operators.forEach((button) => {
+    button.addEventListener("click", () => {
+        firstNum = displayValue;
+        resetNum()
+        return display.textContent = displayValue,
+                storedNum.textContent = firstNum;
+    })
+})

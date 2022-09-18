@@ -1,13 +1,25 @@
-#display {
+#disContainer {
     display: flex;
-    flex-direction: row;
-    justify-content: end;
+    flex-direction: column;
+    justify-content: space-evenly;
     border:1px black solid;
     background-color: rgb(180, 176, 176);
     max-width: 400px;
     height: 20px;
     padding: 20px;
     margin-bottom: 10px;
+}
+
+#display {
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
+}
+
+#prevNum {
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
 }
 
 #buttons {
