@@ -30,17 +30,13 @@ const display = document.querySelector('#display');
 
 let displayValue = 0;
 
-display.textContent = displayValue ;
+display.textContent = displayValue;
 
 const padNum = document.querySelectorAll(".num");
-
-//Edited method to remove current value on display and replace with new displayValue
 
 padNum.forEach((button) => {
     button.addEventListener("click", () => {
     if (display.textContent === "0") {
-        console.log(display.textContent)
-        console.log(typeof(button.textContent));
     displayValue = button.textContent;
     return display.textContent = displayValue;
     } else {
@@ -49,3 +45,16 @@ padNum.forEach((button) => {
     }
 })
 });
+
+const clear = document.querySelector(".clear");
+
+clear.addEventListener("click", () => {
+    resetNum()
+});
+
+function resetNum() {
+    displayValue = 0;
+    return display.textContent = displayValue;
+}
+
+const operators = document.querySelectorAll(".opr");
