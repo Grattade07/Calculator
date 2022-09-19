@@ -86,9 +86,10 @@ operators.forEach((button) => {
         resetNum()
         return display.textContent = displayValue,
                 storedNum.textContent = `${firstNum} ${selectedOpr}`;
+        } else if (displayValue === 0 && selectedOpr === "/") {
+            return alert("It's not possible to divide by zero");
         } else if (firstNum !== 0) {
             selectedOpr = button.textContent;
-            console.log(selectedOpr);
             firstNum = operate(Number(firstNum), selectedOpr, Number(displayValue));
             resetNum();
             return storedNum.textContent = `${firstNum} ${selectedOpr}`;    
