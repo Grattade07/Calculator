@@ -67,6 +67,17 @@
     border-radius: 10px;
 }
 
+.equ {
+    margin: 15px 15px;
+    width: 50px;
+    height: 35px;
+    font-size: 20px;
+    background-color: rgb(207, 159, 27);
+    color: rgb(0, 0, 0);
+    font-weight: bold;
+    border-radius: 10px;
+}
+
 .dec {
     width: 50px;
     height:35px;
@@ -123,7 +134,7 @@
     border-radius: 10px;
 }
 
-.equ {
+.del {
     margin: 0px 5px;
     width: 60px;
     height: 25px;

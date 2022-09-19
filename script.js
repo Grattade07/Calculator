@@ -124,3 +124,14 @@ decimal.addEventListener("click", () => {
     }
     }
 );
+
+const removeNum = document.querySelector(".del");
+
+removeNum.addEventListener("click", deleteNum);
+
+function deleteNum() {
+   displayValue = display.textContent
+   .toString()
+    .slice(0, -1);
+    display.textContent = displayValue;
+}
