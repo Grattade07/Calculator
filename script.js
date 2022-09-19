@@ -78,8 +78,6 @@ storedNum.textContent = firstNum;
 
 const operators = document.querySelectorAll(".opr");
 
-//Find way to display new operators with each button click
-
 operators.forEach((button) => {
     button.addEventListener("click", () => {
         if (firstNum === 0) {
@@ -88,7 +86,9 @@ operators.forEach((button) => {
         resetNum()
         return display.textContent = displayValue,
                 storedNum.textContent = `${firstNum} ${selectedOpr}`;
-        } else if (firstNum != 0) {
+        } else if (firstNum !== 0) {
+            selectedOpr = button.textContent;
+            console.log(selectedOpr);
             firstNum = operate(Number(firstNum), selectedOpr, Number(displayValue));
             resetNum();
             return storedNum.textContent = `${firstNum} ${selectedOpr}`;    
