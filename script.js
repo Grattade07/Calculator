@@ -90,6 +90,7 @@ operators.forEach((button) => {
             return alert("It's not possible to divide by zero");
         } else if (firstNum !== 0) {
             firstNum = operate(Number(firstNum), selectedOpr, Number(displayValue));
+            firstNum = +firstNum.toFixed(3);
             selectedOpr = button.textContent;
             resetNum();
             return storedNum.textContent = `${firstNum} ${selectedOpr}`;    
@@ -101,6 +102,7 @@ const solution = document.querySelector(".equ");
 
 solution.addEventListener("click", () => {
     displayValue = operate(Number(firstNum), selectedOpr, Number(displayValue));
+    displayValue = +displayValue.toFixed(3);
     resetStoredNum();
     return display.textContent = displayValue;
 })
