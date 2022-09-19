@@ -47,6 +47,14 @@
    
 }
 
+.dec {
+    width: 30px;
+    height:40px;
+    margin: 15px 30px;
+    font-size: 20px;
+   
+}
+
 #functions {
     display: flex;
     flex-direction: column;

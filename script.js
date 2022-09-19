@@ -112,3 +112,15 @@ const clearAll = document.querySelector(".clearAll");
 clearAll.addEventListener("click", () => {
     resetAll();
 });
+
+const decimal = document.querySelector(".dec");
+
+decimal.addEventListener("click", () => {
+    if (display.textContent.includes(".")) {
+        return
+    } else {
+        displayValue += decimal.textContent
+        return display.textContent = displayValue;
+    }
+    }
+);
